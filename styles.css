@@ -1,0 +1,132 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#app {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px;
+    background: #ffffff;
+    padding: 30px; /* Increased padding */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+#app:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 30px; /* Increased margin */
+    color: #050b12; /* Primary Blue Color */
+}
+
+nav {
+    margin-bottom: 30px; /* Increased margin */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 12px 25px; /* Increased padding */
+    border-radius: 4px;
+    background-color: #007bff; /* Primary Blue Color */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #0056b3; /* Darker Blue Color */
+    transform: translateY(-2px);
+}
+
+.section {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+h2 {
+    margin-bottom: 20px; /* Increased margin */
+    color: #050b12; /* Primary Blue Color */
+}
+
+label {
+    display: block;
+    margin: 10px 0; /* Increased margin */
+    color: #555;
+}
+
+input {
+    width: calc(100% - 22px); /* Adjusted width to match increased padding */
+    padding: 12px; /* Increased padding */
+    margin-bottom: 15px; /* Increased margin */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #007bff; /* Primary Blue Color */
+}
+
+button {
+    padding: 12px 25px; /* Increased padding */
+    background-color: #28a745; /* Green Action Color */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838; /* Darker Green Color */
+    transform: translateY(-2px);
+}
+
+#results, #all-posts {
+    margin-top: 25px; /* Increased margin */
+    padding: 15px; /* Increased padding */
+    background-color: #e9ecef;
+    border-radius: 4px;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    input {
+        width: calc(100% - 18px); /* Adjusted width to match increased padding */
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

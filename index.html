@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post and Tag Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <h1>Post and Tag Management</h1>
+
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('add-post')">Add Post</a></li>
+                <li><a href="#" onclick="showSection('retrieve-posts')">Retrieve Posts</a></li>
+                <li><a href="#" onclick="showAllPosts()">View All Posts</a></li>
+            </ul>
+        </nav>
+
+        <div id="add-post" class="section">
+            <h2>Add a New Post</h2>
+            <label for="post-id">Post ID:</label>
+            <input type="text" id="post-id" required>
+            <label for="post-tags">Tags (comma separated):</label>
+            <input type="text" id="post-tags" required>
+            <button onclick="addPost()">Add Post</button>
+        </div>
+
+        <div id="retrieve-posts" class="section">
+            <h2>Retrieve Posts by Tag</h2>
+            <label for="tag">Tag:</label>
+            <input type="text" id="tag" required>
+            <button onclick="retrievePosts()">Retrieve Posts</button>
+            <div id="results"></div>
+        </div>
+        
+        <div id="view-all-posts" class="section">
+            <h2>All Posts</h2>
+            <div id="all-posts"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
